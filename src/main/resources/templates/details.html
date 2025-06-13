@@ -13,5 +13,12 @@
         <li th:if="${user.email != null}" th:text="${user.email}"></li>
         <li th:if="${user.email == null}" th:text="'Email no disponible'"></li>
     </ul>
+<a th:href="@{/list}">Ver Listado</a>
+<br>
+<a th:href="@{'/api/params/foo?message=' + ${title}}">Ver Mensaje</a>
+<br>
+<a th:href="@{/api/params/foo(message='hola que tal 2')}">Ver Mensaje2</a>
+<br>
+<a th:href="@{/api/params/bar(text='hola que tal 2', code=123)}">Ver bar mix param</a>
 </body>
 </html>
